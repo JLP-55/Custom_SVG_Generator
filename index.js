@@ -29,14 +29,11 @@ inquirer.prompt ([
     },
 ])
 .then((response) => {
-    console.log(response.textContent);
-    console.log(response.textColour);
-    console.log(response.logoShape);
-    console.log(response.logoColour);
-
-    writeFile();
+    console.log(response);
+    
+    // The spread operator for response doesn't work
+    // If replaced with response."something", then that individual user selection will be renderd to the newly generated logo.svg file
+    fs.writeFile("./user_generated_logo/logo.svg", { ...response }, (err) => {
+        err ? console.log(err) : console.log("Generated logo.svg");
+    });
 });
-
-function writeFile () {
-    console.log("hello");
-}
