@@ -4,17 +4,17 @@ const fs = require("fs");
 inquirer.prompt ([
     {
         type: "input",
-        name: "text-content",
+        name: "textContent",
         message: "Please enter up to three characters for your logo"
     },
     {
         type: "input",
-        name: "text-colour",
+        name: "textColour",
         message: "What colour should your logos text be?"
     },
     {
         type: "list",
-        name: "logo-shape",
+        name: "logoShape",
         message: "Please select a shape for your logo",
         choices: [
             "Circle",
@@ -24,11 +24,18 @@ inquirer.prompt ([
     },
     {
         type: "input",
-        name: "logo-colour",
+        name: "logoColour",
         message: "What colour should your logos shape be?"
     },
 ])
-.then(writeFile());
+.then((response) => {
+    console.log(response.textContent);
+    console.log(response.textColour);
+    console.log(response.logoShape);
+    console.log(response.logoColour);
+
+    writeFile();
+});
 
 function writeFile () {
     console.log("hello");
