@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-inquirer.prompt ([
+const userQuestions = [
     {
         type: "input",
         name: "textContent",
@@ -27,13 +27,23 @@ inquirer.prompt ([
         name: "logoColour",
         message: "What colour should your logos shape be?"
     },
-])
-.then((response) => {
+] 
+
+inquirer.prompt(userQuestions).then((response) => {
     console.log(response);
-    
+    // const allItems = { userQuestions: { response }};
+
+    var userSelectedItems = () => {
+        console.log(response.textContent, response.textColour, response.logoShape, response.logoColour);
+        return response.textContent, response.textColour, response.logoShape, response.logoColour;
+    };
+
     // The spread operator for response doesn't work
+    // The spread operator for userSelectedItems doesn't work
     // If replaced with response."something", then that individual user selection will be renderd to the newly generated logo.svg file
-    fs.writeFile("./user_generated_logo/logo.svg", { ...response }, (err) => {
+                                                // Neither of the fs.writeFile functions work.
+    fs.writeFile("./user_generated_logo/logo.svg", { ...userSelectedItems() }, (err) => {
+    // fs.writeFile("./user_generated_logo/logo.svg", userSelectedItems(...response), (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
     });
 });
