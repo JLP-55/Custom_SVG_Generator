@@ -51,7 +51,7 @@ inquirer.prompt(userQuestions).then((response) => {
     // The spread operator for userSelectedItems doesn't work
     // If replaced with response."something", then that individual user selection will be renderd to the newly generated logo.svg file
                                                 // Neither of the fs.writeFile functions work.
-    fs.writeFile("./user_generated_logo/logo.svg", JSON.stringify({ ...responseArray }), (err) => {
+    fs.writeFile("./generated_logo/user_logo.svg", JSON.stringify({ ...responseArray }), (err) => {
     // fs.writeFile("./user_generated_logo/logo.svg", userSelectedItems(...response), (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
     });
