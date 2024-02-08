@@ -1,7 +1,7 @@
 <!-- example circle -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
 
-<circle r="45" cx="150" cy="105" style="fill:green;stroke:black;stroke-width:3;" />
+<circle r="80" cx="150" cy="105" style="fill:green;stroke:black;stroke-width:3;"/>
 
 <text x="150" y="125" font-size="60" text-anchor="middle" fill="Black">SVG</text>
 
