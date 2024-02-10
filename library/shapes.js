@@ -12,7 +12,8 @@ class Shape {
 class Circle extends Shape {
     render() {
         
-        return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+        return `
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
 
         <circle r="80" cx="150" cy="105" style="fill:${this.logoColour};stroke:black;stroke-width:3;"/>
 
@@ -26,7 +27,8 @@ class Circle extends Shape {
 class Square extends Shape {
     render() {
         
-        return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+        return `
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
 
         <rect x="72" y="30" width="150" height="150" style="fill:${this.logoColour};stroke:black;stroke-width:3;"/>
 
@@ -39,7 +41,8 @@ class Square extends Shape {
 class Triangle extends Shape {
     render() {
         
-        return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+        return `
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
 
         <polygon points=" 150,10 270,160, 30,160" style="fill:${this.logoColour};stroke:black;stroke-width:3;"/>
 

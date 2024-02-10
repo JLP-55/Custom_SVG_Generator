@@ -59,11 +59,11 @@ inquirer.prompt(userQuestions)
         // Reasign value of shape dependant on the users input.
         if (response.logoShape === "Circle") {
             // Here, shape will equal a new instance of the Circle class
-            shape = new Circle(response.logoColour, response.textColour.toLowerCase(), response.textContent);
+            shape = new Circle(response.logoColour.toLowerCase(), response.textColour.toLowerCase(), response.textContent.toUpperCase());
         } else if (response.logoShape === "Square") {
-            shape = new Square(response.logoColour, response.textColour.toLowerCase(), response.textContent);
+            shape = new Square(response.logoColour.toLowerCase(), response.textColour.toLowerCase(), response.textContent.toUpperCase());
         } else {
-            shape = new Triangle(response.logoColour, response.textColour.toLowerCase(), response.textContent);
+            shape = new Triangle(response.logoColour.toLowerCase(), response.textColour.toLowerCase(), response.textContent.toUpperCase());
         };
 
         //Write to the file.
