@@ -52,5 +52,5 @@ class Triangle extends Shape {
     };
 };
 
-
+// Export relevant shape classes.
 module.exports = { Circle, Square, Triangle };

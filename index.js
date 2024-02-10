@@ -15,7 +15,7 @@ const userQuestions = [
     {
         type: "input",
         name: "textColour",
-        message: "What colour should your logos text be?"
+        message: "To select the colour of your text, please enter either:\n- A colour keyword\n- Hexadecimal number\n"
     },
     {
         type: "list",
@@ -30,7 +30,7 @@ const userQuestions = [
     {
         type: "input",
         name: "logoColour",
-        message: "What colour should your logos shape be?"
+        message: "To select the colour of your shape, please enter either:\n- A colour keyword\n- Hexadecimal number\n"
     },
 ]
 
@@ -44,7 +44,7 @@ inquirer.prompt(userQuestions)
         };
 
         let black = response.textColour.toLowerCase();
-    
+
         // Conditional statement to check whether the user selected black text.
         // If so, the text border will be white, otherwise it will be black.
         if (black === "black") {
@@ -67,6 +67,7 @@ inquirer.prompt(userQuestions)
         };
 
         //Write to the file.
+        // The data will be the shapes render method.
         fs.writeFile("./generated_logo/logo.svg", shape.render(), (err) => {
             err ? console.log(err) : console.log("Generated logo.svg");
         });
