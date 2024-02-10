@@ -51,7 +51,7 @@ inquirer.prompt(userQuestions)
         };
 
         //Write to the file.
-        fs.writeFile("./generated_logo/user_logo.svg", shape.render(), (err) => {
+        fs.writeFile("./generated_logo/logo.svg", shape.render(), (err) => {
             err ? console.log(err) : console.log("Generated logo.svg");
         });
 
