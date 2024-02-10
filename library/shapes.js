@@ -1,79 +1,67 @@
-// // Class constructor
-// class Shapes{
-//     constructor() {
-//         this.colour = "";
-//     };
-//     setColour(colour) {
-//         this.colour = (colour);
-//     }
-// };
-
-// class Circle extends Shapes{
-//     constructor() {
-//         this.colour
-//     }
-// }
-
-//Constructor function
-function Circle(colour, shape) {
+//Constructor functions
+function Shapes(colour) {
     this.colour = colour;
+};
+
+function Circle(shape) {
+    Shapes.call(this, colour, shape);
     this.shape = shape;
     
     this.fill = function() {
-        // console.log(`<circle r="80" cx="150" cy="105" style="fill:${this.colour};stroke:black;stroke-width:3;"/>`);
         return `<circle r="80" cx="150" cy="105" style="fill:${this.colour};stroke:black;stroke-width:3;"/>`;
     };
 };
 
-function Text(textColour, textContent) {
-    this.textColour = textColour;
-    this.textContent = textContent;
-}
+function Triangle(shape) {
+    Shapes.call(this, colour, shape);
+    this.shape = shape;
+    
+    this.fill = function() {
+        return `<polygon points=" 150,10 270,155, 30,155" style="fill:${this.colour};stroke:black;stroke-width:3;"/>`;
+    };
+};
 
-module.exports = {Circle, Text};
+function Square(shape) {
+    Shapes.call(this, colour, shape);
+    this.shape = shape;
+    
+    this.fill = function() {
+        return `<rect x="72" y="30" width="150" height="150" style="fill:${this.colour};stroke:black;stroke-width:3;"/>`;
+    };
+};
 
-// // Example of constructor function inheritance
-// function Animal(name, age, breed) {
-//     this.name = name;
-//     this.age = age;
-//     this.breed = breed;
-//     this.nap = function () {
-//       console.log('Zzzzzzzzz');
+module.exports = {Circle, Triangle, Square};
+
+
+// class Shapes {
+//     constructor(colour) {
+//         this.colour = colour;
 //     };
-//     this.getLives = function () {
-//       return 1;
-//     };
-//   }
-  
-//   function Dog(name, age, breed, puppies) {
-//     Animal.call(this, name, age, breed);
-//     this.puppies = puppies;
-//   }
-  
-//   Dog.prototype.bark = function () {
-//     console.log('Woof!');
-//   };
 
-// // Example of class inheritance
-// class ForumItem {
-//     constructor(authorName, createdOn) {
-//       this.authorName = authorName;
-//       this.createdOn = createdOn;
-//     }
-  
-//     printMetaData() {
-//       console.log(`Created by ${this.authorName} on ${this.createdOn}`);
-//     }
-//   }
-  
-//   class BlogPost extends ForumItem {
-//     constructor(authorName, title, createdOn) {
-//         super(authorName, createdOn);
-//       this.title = title;
-//       this.comments = [];
-//     }
-  
-//     addComment(comment) {
-//       this.comments.push(comment);
-//     }
-//   }
+//     circle() {
+//         return `<circle r="80" cx="150" cy="105" style="fill:${this.colour};stroke:black;stroke-width:3;"/>`;
+//     };
+
+//     triangle() {
+//         return `<polygon points=" 150,10 270,155, 30,155" style="fill:${this.colour};stroke:black;stroke-width:3;"/>`;
+//     };
+
+//     square() {
+//         return `<rect x="72" y="30" width="150" height="150" style="fill:${this.colour};stroke:black;stroke-width:3;"/>`;
+//     };
+// };
+
+// function allShapes() {
+//     if (response.logoShape === "Cirlce") {
+//         const circle = new Shapes(response.logoShape);
+//         circle.circle();
+//     } else if (response.logoShape === "Triangle") {
+//         const triangle = new Shapes(response.logoShape);
+//         triangle.triangle();
+//     } else if (response.logoShape === "Square") {
+//         const square = new Shapes(response.logoShape);
+//         square.square();
+//     };
+// };
+
+// module.exports = {Shapes, allShapes};
