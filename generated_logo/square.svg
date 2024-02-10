@@ -3,6 +3,6 @@
 
 <rect x="72" y="30" width="150" height="150" style="fill:red;stroke:black;stroke-width:3;"/>
 
-<text x="150" y="125" font-size="60" text-anchor="middle" fill="Black">SVG</text>
+<text x="150" y="125" font-size="60" text-anchor="middle" style="fill:black;stroke:white;stroke-width:0.3;">SVG</text>
 
 </svg>
