@@ -3,6 +3,6 @@
 
 <circle r="80" cx="150" cy="105" style="fill:green;stroke:black;stroke-width:3;"/>
 
-<text x="150" y="125" font-size="60" text-anchor="middle" fill="Black">SVG</text>
+<text x="150" y="125" font-size="60" text-anchor="middle" style="fill:gold;stroke:black;stroke-width:1;">SVG</text>
 
 </svg>

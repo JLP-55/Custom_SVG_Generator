@@ -1,8 +1,8 @@
 <!-- expample triangle -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
 
-<polygon points=" 150,10 270,155, 30,155" style="fill:blue;stroke:black;stroke-width:3;"/>
+<polygon points=" 150,10 270,160, 30,160" style="fill:blue;stroke:black;stroke-width:3;"/>
 
-<text x="150" y="125" font-size="60" text-anchor="middle" fill="Red">SVG</text>
+<text x="150" y="125" font-size="60" text-anchor="middle" style="fill:red;stroke:black;stroke-width:1;">SVG</text>
 
 </svg>
