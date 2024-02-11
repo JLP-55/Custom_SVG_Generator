@@ -12,7 +12,7 @@ Ensure you install the required packages, both **Inquirer version 8.2.4** and **
 You can create a logo of your choice by first opening your terminal and running ```node ./index.js``` from the command line.<br>
 Then follow the prompts to generate your logo.
 
-Additionally, [follow this link](https://google.com) to the video tutorial on how to execute this programme.
+Additionally, [follow this link](https://www.youtube.com/watch?v=5-rcIimnplU) to the video tutorial on how to execute this programme.
 
 ---
 ### Tests
@@ -20,13 +20,13 @@ The included tests will check to see whether the correct values are being applie
 > To run, first install the testing library **Jest** as described in the **Usage** section.<br>
 > You can run a test from the command line using the command: ```npm run test```
 
-Additionally [follow this link](https://google.com) to a video tutorial on how to run tests using Jest.
+Additionally, [follow this link](https://www.youtube.com/watch?v=SPFmJXWl7-M) to a video tutorial on how to run tests using Jest.
 
 ---
 ### Links
 The following links will provide further instruction on the usage of this application<br>
-- [How to run the application to generate a logo](https://google.com)<br>
-- [How to run tests](https://google.com)
+- [How to run the application to generate a logo](https://www.youtube.com/watch?v=5-rcIimnplU)<br>
+- [How to run tests](https://www.youtube.com/watch?v=SPFmJXWl7-M)
 
 ---
 ### Licence
