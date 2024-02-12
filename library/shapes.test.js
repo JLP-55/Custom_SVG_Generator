@@ -5,9 +5,19 @@ describe("Circle", () => {
     it("should render the relevant svg file content upon being selected by the user", () => {
         // Create a new instance of the class Circle
         const shape = new Circle();
+        // const renderMethod = shape.render();
 
         // You would expect the shapes render method to equal the return value,
         // in this case, the data that will be is relevant to the users selection.
+        // expect(renderMethod).toEqual(
+        // `
+        // <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+
+        // <circle r="80" cx="150" cy="105" style="fill:${this.logoColour};stroke:black;stroke-width:3;"/>
+
+        // <text x="150" y="125" font-size="60" text-anchor="middle" style="fill:${this.textColour};stroke:black;stroke-width:1;">${this.textContent}</text>
+
+        // </svg>`)
         expect(shape.render()).toEqual( 
         `
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">

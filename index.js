@@ -38,7 +38,7 @@ inquirer.prompt(userQuestions)
     .then((response) => {
 
         // Conditional statement to only allow the user to enter up to three letters for their logo.
-        if (response.textContent.length > 3) {
+        if (response.textContent.length !== 3) {
             console.log("Please enter a a three letter logo");
             return;
         };
