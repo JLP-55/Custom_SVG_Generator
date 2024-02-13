@@ -43,17 +43,15 @@ inquirer.prompt(userQuestions)
             return;
         };
 
-        // // Cannot currently run the test with ${strokeColour} in the child shape classes,
-        // // as it shows up as undefined in the test.
-        // let black = response.textColour.toLowerCase();
+        let black = response.textColour.toLowerCase();
 
-        // // Conditional statement to check whether the user selected black text.
-        // // If so, the text border will be white, otherwise it will be black.
-        // if (black === "black") {
-        //     strokeColour = "white";
-        // } else {
-        //     strokeColour = "black";
-        // };
+        // Conditional statement to check whether the user selected black text.
+        // If so, the text border will be white, otherwise it will be black.
+        if (black === "black") {
+            strokeColour = "white";
+        } else {
+            strokeColour = "black";
+        };
 
         // Declares the variable "shape" without assigning a value.
         let shape;
