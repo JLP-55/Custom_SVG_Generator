@@ -3,11 +3,29 @@
 
 This project aims to enable any user who desires to create a sharp, stylish and aesthetically pleasing logo, for business purposes or otherwise, to do so simply and efficiently, straight from the command line.
 
+--- 
+<details>
+    <summary>Table of contents</summary>
+    <ul>
+        <li>
+            <a href="#usage">Usage</a>
+        </li>
+        <li>
+            <a href="#tests">Tests</a>
+        </li>
+        <li>
+            <a href="#links">Links</a>
+        </li>
+        <li>
+            <a href="#licence">Licence</a>
+        </li>
+    </ul>
+</details>
+
 ---
 ### Usage
 Ensure you install the required packages, both **Inquirer version 8.2.4** and **Jest**.
-> To install Inquirer, run ```npm install inquirer@8.2.4``` from the command line<br>
-> To install Jest, run ```npm install jest``` from the command line
+> To install both packeges run ```npm install``` from the command line.
 
 You can create a logo of your choice by first opening your terminal and running ```node ./index.js``` from the command line.<br>
 Then follow the prompts to generate your logo.
