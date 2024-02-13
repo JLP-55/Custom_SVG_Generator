@@ -44,7 +44,6 @@ inquirer.prompt(userQuestions)
         };
 
         let black = response.textColour.toLowerCase();
-        console.log(black)
 
         // Conditional statement to check whether the user selected black text.
         // If so, the text border will be white, otherwise it will be black.
@@ -53,7 +52,6 @@ inquirer.prompt(userQuestions)
         } else {
             strokeColour = "black";
         };
-        console.log(strokeColour)
 
         // Declares the variable "shape" without assigning a value.
         let shape;
