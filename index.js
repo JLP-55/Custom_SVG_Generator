@@ -44,6 +44,7 @@ inquirer.prompt(userQuestions)
         };
 
         let black = response.textColour.toLowerCase();
+        console.log(black)
 
         // Conditional statement to check whether the user selected black text.
         // If so, the text border will be white, otherwise it will be black.
@@ -52,6 +53,7 @@ inquirer.prompt(userQuestions)
         } else {
             strokeColour = "black";
         };
+        console.log(strokeColour)
 
         // Declares the variable "shape" without assigning a value.
         let shape;
@@ -59,11 +61,11 @@ inquirer.prompt(userQuestions)
         // Reasign value of shape dependant on the users input.
         if (response.logoShape === "Circle") {
             // Here, shape will equal a new instance of the Circle class
-            shape = new Circle(response.logoColour.toLowerCase(), response.textColour.toLowerCase(), response.textContent.toUpperCase());
+            shape = new Circle(response.logoColour.toLowerCase(), response.textColour.toLowerCase(), response.textContent.toUpperCase(), strokeColour);
         } else if (response.logoShape === "Square") {
-            shape = new Square(response.logoColour.toLowerCase(), response.textColour.toLowerCase(), response.textContent.toUpperCase());
+            shape = new Square(response.logoColour.toLowerCase(), response.textColour.toLowerCase(), response.textContent.toUpperCase(), strokeColour);
         } else {
-            shape = new Triangle(response.logoColour.toLowerCase(), response.textColour.toLowerCase(), response.textContent.toUpperCase());
+            shape = new Triangle(response.logoColour.toLowerCase(), response.textColour.toLowerCase(), response.textContent.toUpperCase(), strokeColour);
         };
 
         //Write to the file.
